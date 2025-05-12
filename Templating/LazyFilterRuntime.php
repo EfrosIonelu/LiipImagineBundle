@@ -12,6 +12,7 @@
 namespace Liip\ImagineBundle\Templating;
 
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Twig\Extension\RuntimeExtensionInterface;
 
@@ -39,7 +40,7 @@ final class LazyFilterRuntime implements RuntimeExtensionInterface
      */
     private $jsonManifestLookup;
 
-    public function __construct(CacheManager $cache, ?string $assetVersion = null, ?array $jsonManifest = null)
+    public function __construct(CacheManagerInterface $cache, ?string $assetVersion = null, ?array $jsonManifest = null)
     {
         $this->cache = $cache;
         $this->assetVersion = $assetVersion;

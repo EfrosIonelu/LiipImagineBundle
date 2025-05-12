@@ -13,6 +13,7 @@ namespace Liip\ImagineBundle\Imagine\Cache\Resolver;
 
 use Liip\ImagineBundle\Binary\BinaryInterface;
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Liip\ImagineBundle\Imagine\Cache\CacheManagerAwareInterface;
 use Symfony\Component\Filesystem\Exception\IOException;
 use Symfony\Component\Filesystem\Filesystem;
@@ -57,7 +58,7 @@ abstract class AbstractFilesystemResolver implements ResolverInterface, CacheMan
         $this->request = $request;
     }
 
-    public function setCacheManager(CacheManager $cacheManager)
+    public function setCacheManager(CacheManagerInterface $cacheManager)
     {
         $this->cacheManager = $cacheManager;
     }

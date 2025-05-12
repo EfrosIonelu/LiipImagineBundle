@@ -12,6 +12,7 @@
 namespace Liip\ImagineBundle\Tests\Templating;
 
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Liip\ImagineBundle\Templating\LazyFilterRuntime;
 use Liip\ImagineBundle\Tests\AbstractTest;
 use PHPUnit\Framework\MockObject\MockObject;
@@ -36,7 +37,7 @@ class LazyFilterRuntimeTest extends AbstractTest
     private $runtime;
 
     /**
-     * @var CacheManager|MockObject
+     * @var CacheManagerInterface|MockObject
      */
     private $manager;
 

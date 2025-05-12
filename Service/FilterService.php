@@ -14,6 +14,7 @@ namespace Liip\ImagineBundle\Service;
 use Liip\ImagineBundle\Binary\BinaryInterface;
 use Liip\ImagineBundle\Exception\Imagine\Filter\NonExistingFilterException;
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Liip\ImagineBundle\Imagine\Data\DataManager;
 use Liip\ImagineBundle\Imagine\Filter\FilterManager;
 use Psr\Log\LoggerInterface;
@@ -54,7 +55,7 @@ class FilterService
     public function __construct(
         DataManager $dataManager,
         FilterManager $filterManager,
-        CacheManager $cacheManager,
+        CacheManagerInterface $cacheManager,
         bool $webpGenerate = false,
         array $webpOptions = [],
         ?LoggerInterface $logger = null

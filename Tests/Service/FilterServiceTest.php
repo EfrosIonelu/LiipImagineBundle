@@ -14,6 +14,7 @@ namespace Liip\ImagineBundle\Tests\Service;
 use Liip\ImagineBundle\Binary\BinaryInterface;
 use Liip\ImagineBundle\Exception\Imagine\Filter\NonExistingFilterException;
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Liip\ImagineBundle\Imagine\Data\DataManager;
 use Liip\ImagineBundle\Imagine\Filter\FilterManager;
 use Liip\ImagineBundle\Service\FilterService;
@@ -52,7 +53,7 @@ final class FilterServiceTest extends TestCase
     private $filterManager;
 
     /**
-     * @var MockObject|CacheManager
+     * @var MockObject|CacheManagerInterface
      */
     private $cacheManager;
 

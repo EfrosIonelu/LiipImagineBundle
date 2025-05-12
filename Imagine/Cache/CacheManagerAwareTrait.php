@@ -14,11 +14,11 @@ namespace Liip\ImagineBundle\Imagine\Cache;
 trait CacheManagerAwareTrait
 {
     /**
-     * @var CacheManager
+     * @var CacheManagerInterface
      */
     protected $cacheManager;
 
-    public function setCacheManager(CacheManager $cacheManager)
+    public function setCacheManager(CacheManagerInterface $cacheManager)
     {
         $this->cacheManager = $cacheManager;
     }

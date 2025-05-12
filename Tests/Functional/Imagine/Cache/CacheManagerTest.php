@@ -11,7 +11,7 @@
 
 namespace Liip\ImagineBundle\Tests\Functional\Imagine\Cache;
 
-use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Liip\ImagineBundle\Tests\Functional\AbstractWebTestCase;
 
 /**
@@ -39,7 +39,7 @@ class CacheManagerTest extends AbstractWebTestCase
     {
         $this->createClient();
 
-        /** @var CacheManager $manager */
+        /** @var CacheManagerInterface $manager */
         $manager = self::$kernel->getContainer()->get('liip_imagine.cache.manager');
 
         $this->assertSame(

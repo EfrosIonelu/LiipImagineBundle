@@ -13,7 +13,7 @@ namespace Liip\ImagineBundle\Command;
 
 use Imagine\Exception\RuntimeException;
 use Liip\ImagineBundle\Component\Console\Style\ImagineStyle;
-use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Liip\ImagineBundle\Imagine\Filter\FilterManager;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -24,7 +24,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 trait CacheCommandTrait
 {
     /**
-     * @var CacheManager
+     * @var CacheManagerInterface
      */
     private $cacheManager;
 

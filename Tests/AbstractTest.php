@@ -18,6 +18,7 @@ use Liip\ImagineBundle\Binary\Loader\LoaderInterface;
 use Liip\ImagineBundle\Binary\MimeTypeGuesserInterface;
 use Liip\ImagineBundle\Config\Controller\ControllerConfig;
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Liip\ImagineBundle\Imagine\Cache\Resolver\ResolverInterface;
 use Liip\ImagineBundle\Imagine\Cache\SignerInterface;
 use Liip\ImagineBundle\Imagine\Data\DataManager;
@@ -108,7 +109,7 @@ abstract class AbstractTest extends TestCase
     }
 
     /**
-     * @return MockObject|CacheManager
+     * @return MockObject|CacheManagerInterface
      */
     protected function createCacheManagerMock()
     {

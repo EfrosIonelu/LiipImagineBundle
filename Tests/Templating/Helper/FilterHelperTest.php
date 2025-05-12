@@ -12,6 +12,7 @@
 namespace Liip\ImagineBundle\Tests\Templating\Helper;
 
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Liip\ImagineBundle\Templating\Helper\FilterHelper;
 use Liip\ImagineBundle\Tests\Templating\AbstractFilterTest;
 use Symfony\Component\Templating\Helper\Helper;
@@ -29,7 +30,7 @@ class FilterHelperTest extends AbstractFilterTest
         $this->assertInstanceOf(Helper::class, $this->createTemplatingMock());
     }
 
-    protected function createTemplatingMock(?CacheManager $manager = null): FilterHelper
+    protected function createTemplatingMock(?CacheManagerInterface $manager = null): FilterHelper
     {
         $mock = new FilterHelper($manager ?: $this->createCacheManagerMock());
 

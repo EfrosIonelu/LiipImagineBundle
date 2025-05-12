@@ -11,7 +11,7 @@
 
 namespace Liip\ImagineBundle\Command;
 
-use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Liip\ImagineBundle\Imagine\Cache\CacheManagerInterface;
 use Liip\ImagineBundle\Imagine\Filter\FilterManager;
 use Liip\ImagineBundle\Service\FilterService;
 use Symfony\Component\Console\Command\Command;
@@ -29,7 +29,7 @@ class ResolveCacheCommand extends Command
      */
     private $filterService;
 
-    public function __construct(CacheManager $cacheManager, FilterManager $filterManager, FilterService $filterService)
+    public function __construct(CacheManagerInterface $cacheManager, FilterManager $filterManager, FilterService $filterService)
     {
         parent::__construct();
 
